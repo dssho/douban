@@ -1,0 +1,14 @@
+<!-- 有值的话才会去渲染 -->
+<navigator wx:if="{{item}}" url="{{itemurl}}" class="item-navigator">
+      <view class="item-group">
+        <view class="thumbnail-group">
+          <image class="thumbnail" src="{{item.images.medium}}"></image>
+        </view>
+        <view class="item-title">{{item.title}}</view>
+         
+         <stars rate="{{item.rating.average}}"></stars>
+
+      </view>
+ </navigator>
+
+<view wx:else class="item-navigator"></view>

@@ -1,0 +1,21 @@
+<view class="module-group">
+  <view class="module-top">
+    <view class="module-title">{{title}}</view>
+    <navigator url="{{moreurl}}" class="module-more">更多</navigator>
+  </view>
+  <scroll-view class="module-scroll-view" scroll-x="{{true}}">
+    <itemview wx:for="{{items}}" wx:key="index" item="{{item}}" itemurl="/pages/detail/detail?type={{type}}&id={{item.id}}"></itemview>
+
+    <!-- <navigator wx:for="{{items}}" wx:key="index" class="item-navigator">
+      <view class="item-group">
+        <view class="thumbnail-group">
+          <image class="thumbnail" src="{{item.images.medium}}"></image>
+        </view>
+        <view class="item-title">{{item.title}}</view>
+         
+         <stars rate="{{item.rating.average}}"></stars>
+
+      </view>
+    </navigator> -->
+  </scroll-view>
+</view>

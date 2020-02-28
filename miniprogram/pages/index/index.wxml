@@ -1,0 +1,29 @@
+<searchbar isnavigator="{{true}}"></searchbar>
+<!-- 正在热映 -->
+<indexmodule title="正在热映电影" type="movie" items="{{movies}}" moreurl="/pages/list/list?type=movie"></indexmodule>
+
+<!--  top250-->
+<indexmodule title="Top250电影" items="{{top}}" type="top"  moreurl="/pages/list/list?type=top"></indexmodule>
+
+<!-- <view class="module-group">
+  <view class="module-top">
+    <view class="module-title">top250电影</view>
+    <navigator class="module-more">更多</navigator>
+  </view>
+  <scroll-view class="module-scroll-view" scroll-x="{{true}}">
+    <navigator wx:for="{{top}}" wx:key="index" class="item-navigator">
+      <view class="item-group">
+        <view class="thumbnail-group">
+          <image class="thumbnail" src="{{item.images.medium}}"></image>
+        </view>
+        <view class="item-title">{{item.title}}</view>
+         
+         <stars rate="{{item.rating.average}}"></stars>
+
+      </view>
+    </navigator>
+  </scroll-view>
+</view> -->
+<!-- 即将上映 -->
+<indexmodule title="即将上映电影" items="{{coming}}" type="coming"  moreurl="/pages/list/list?type=coming"></indexmodule>
+

@@ -1,0 +1,19 @@
+<!--pages/search/search.wxml-->
+<searchbar bindsearchinput="onSearchInputEvent"></searchbar>
+ <view class="history-list-group" wx:if="{{histories && !subjects}}">
+    <view class="history-title">
+       <view class="title">历史记录</view>
+       <view class="clear" bindtap="onClearEvent">清除</view>
+    </view>
+    <navigator wx:for="{{histories}}" wx:key="index" url="/pages/detail/detail?id={{item.id}}" class="history-group">{{item.title}}</navigator>
+ </view>
+
+<view class="item-list-group">
+  <view wx:for="{{subjects}}" wx:key="index" bindtap="onItemTapEvent" data-id="{{item.id}}" data-title="{{item.title}}" class="item-group">
+    <image src="{{item.pic.normal}}" class="thumbnail"></image>
+    <view class="info-group">
+      <view class="title">{{item.title}}</view>
+      <view class="rate-year">{{item.rating.value}}分/{{item.year}}</view>
+    </view>
+  </view>
+</view>
